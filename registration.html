@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 350px;
+            display: flex;
+            flex-direction: column; /* vertical layout */
+            gap: 10px; /* spacing between elements */
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input, textarea ,button{
+            width: 100%;
+            padding: 8px 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Registration Form</h1>
+        <form>
+            <label for="name">Student Name:</label>
+            <input type="text" name="name" id="name">
+
+            <label for="rollNo">Roll No:</label>
+            <input type="text" name="rollNo" id="rollNo">
+
+            <label for="birth">Date of Birth:</label>
+            <input type="date" name="birth" id="birth">
+
+            <label for="mobile">Mobile No:</label>
+            <input type="number" name="mobile" id="mobile" required placeholder="10-Digit is required">
+
+            <label for="email">Email Id:</label>
+            <input type="email" name="email" id="email">
+
+            <label>Gender:</label>
+            <input type="radio" name="gender" id="male"> <label for="male">Male</label>
+            <input type="radio" name="gender" id="female"> <label for="female">Female</label>
+
+            <label>Department:</label>
+            <input type="checkbox" name="department" id="cse"> <label for="cse">CSE</label>
+            <input type="checkbox" name="department" id="it"> <label for="it">IT</label>
+            <input type="checkbox" name="department" id="ece"> <label for="ece">ECE</label>
+            <input type="checkbox" name="department" id="civil"> <label for="civil">Civil</label>
+            <input type="checkbox" name="department" id="mech"> <label for="mech">Mech</label>
+
+            <label for="address">Address:</label>
+            <textarea name="address" id="address" rows="3"></textarea>
+            <button>Register</button>
+        </form>
+    </div>
+</body>
+</html>
